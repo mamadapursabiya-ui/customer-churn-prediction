@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+env/
+.ipynb_checkpoints/
+churn_model.pkl
+customer_churn.csv
