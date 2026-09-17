@@ -1,98 +1,151 @@
-📊 Customer Churn Prediction & Retention System
+# 📊 Customer Churn Prediction & Retention System
 
-A Machine Learning based web application that predicts whether a customer is likely to churn and provides personalized retention recommendations.
+A Machine Learning based web application that predicts whether a customer is likely to churn and provides retention recommendations.
 
-🚀 Project Overview
+---
+
+# 🚀 Project Overview
 
 Customer churn is a major challenge for businesses because losing existing customers can directly affect revenue.
 
-This project uses Machine Learning to analyze customer information such as tenure, contract type, monthly charges, internet services, payment method, and other customer details to predict the probability of customer churn.
+This project uses **Machine Learning** to analyze customer information such as tenure, contract type, monthly charges, internet services, payment method, and other customer details to predict the probability of customer churn.
 
-The prediction is presented through an interactive Streamlit web application.
+The prediction is presented through an interactive **Streamlit web application**.
 
-🎯 Objectives
-Predict whether a customer is likely to churn.
-Calculate the customer's churn probability.
-Identify potential risk factors.
-Provide business-oriented retention recommendations.
-Build an easy-to-use interactive dashboard.
-🛠️ Technologies Used
-Python
-Pandas
-NumPy
-Scikit-learn
-Joblib
-Streamlit
-Machine Learning
-Data Preprocessing
-Data Analysis
-🤖 Machine Learning
+---
 
-The project compares different classification algorithms:
+# 🎯 Objectives
 
-Logistic Regression
-Random Forest Classifier
-Data Preprocessing
+* Predict whether a customer is likely to churn
+* Calculate the customer's churn probability
+* Identify potential customer risk factors
+* Provide retention recommendations
+* Build an interactive and user-friendly ML application
 
-The following preprocessing techniques are used:
+---
 
-Handling missing values
-Converting TotalCharges into numeric format
-Removing unnecessary customerID
-One-Hot Encoding for categorical features
-Standard Scaling for numerical features
-Train-test split with stratification
-Evaluation Metrics
+# 🛠️ Technologies Used
+
+* **Python**
+* **Pandas**
+* **NumPy**
+* **Scikit-learn**
+* **Joblib**
+* **Streamlit**
+* **Machine Learning**
+* **Data Preprocessing**
+* **Data Analysis**
+
+---
+
+# 🤖 Machine Learning
+
+The project uses classification algorithms to predict customer churn.
+
+### 📌 Models Used
+
+* **Logistic Regression**
+* **Random Forest Classifier**
+
+The models are trained and evaluated, and the model with the better **ROC-AUC score** is selected.
+
+---
+
+# ⚙️ Data Preprocessing
+
+The following preprocessing steps are performed:
+
+* Remove unnecessary `customerID`
+* Convert `TotalCharges` into numeric format
+* Handle missing values
+* One-Hot Encoding for categorical features
+* Standard Scaling for numerical features
+* Train-test split using stratification
+
+---
+
+# 📈 Model Evaluation
 
 The models are evaluated using:
 
-Accuracy
-Precision
-Recall
-F1 Score
-ROC-AUC
-Confusion Matrix
+* **Accuracy**
+* **Precision**
+* **Recall**
+* **F1 Score**
+* **ROC-AUC**
+* **Confusion Matrix**
 
-The model with the better ROC-AUC score is selected and saved using Joblib.
+ROC-AUC is used to compare the model's ability to distinguish between customers who are likely to churn and those who are not.
 
-💻 Application Features
-Customer Prediction
+---
 
-Users can enter customer information such as:
+# 💻 Application Features
 
-Gender
-Senior Citizen
-Partner
-Dependents
-Tenure
-Phone Service
-Internet Service
-Online Security
-Online Backup
-Device Protection
-Tech Support
-Streaming Services
-Contract
-Paperless Billing
-Payment Method
-Monthly Charges
-Total Charges
-📈 Churn Probability
+## 🔹 Customer Information
 
-The application displays the estimated probability that a customer will churn.
+Users can enter customer information including:
 
-⚠️ Risk Level
+* Gender
+* Senior Citizen
+* Partner
+* Dependents
+* Tenure
+* Phone Service
+* Multiple Lines
+* Internet Service
+* Online Security
+* Online Backup
+* Device Protection
+* Tech Support
+* Streaming TV
+* Streaming Movies
+* Contract
+* Paperless Billing
+* Payment Method
+* Monthly Charges
+* Total Charges
 
-Customers are categorized into:
+---
 
-Low Risk
-Medium Risk
-High Risk
-💡 Retention Recommendations
+# 📊 Churn Prediction
 
-Based on customer information and identified risk factors, the application provides possible retention actions.
+The application predicts whether the customer is:
 
-📂 Project Structure
+**Likely to Churn**
+
+or
+
+**Unlikely to Churn**
+
+It also displays the estimated **churn probability**.
+
+---
+
+# ⚠️ Customer Risk Level
+
+The application categorizes customers into:
+
+* 🟢 **Low Risk**
+* 🟡 **Medium Risk**
+* 🔴 **High Risk**
+
+---
+
+# 💡 Retention Recommendations
+
+Based on customer information and identified risk factors, the application provides possible business actions such as:
+
+* Offer suitable contract plans
+* Provide discounts or incentives
+* Improve technical support
+* Recommend additional services
+* Encourage long-term contracts
+
+---
+
+# 📂 Project Structure
+
+```text
 customer-churn-prediction/
 │
 ├── app.py
@@ -100,68 +153,126 @@ customer-churn-prediction/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 
-The dataset and generated model file are excluded from the GitHub repository using .gitignore.
+The dataset and trained model are excluded from GitHub using `.gitignore`.
 
-📊 Dataset
+---
 
-This project uses the Telco Customer Churn dataset, which contains customer demographic information, services, contract details, billing information, and churn status.
+# 📊 Dataset
 
-The dataset contains 7,043 customer records.
+This project uses the **Telco Customer Churn Dataset**, containing customer demographic information, services, contract details, billing information, and churn status.
 
-▶️ How to Run the Project
-1. Clone the repository
+The dataset contains **7,043 customer records**.
+
+---
+
+# ▶️ How to Run
+
+## 1️⃣ Clone the Repository
+
+```bash
 git clone https://github.com/mamadapursabiya-ui/customer-churn-prediction.git
-2. Open the project
+```
+
+## 2️⃣ Open the Project
+
+```bash
 cd customer-churn-prediction
-3. Install the required libraries
+```
+
+## 3️⃣ Install Required Libraries
+
+```bash
 pip install -r requirements.txt
-4. Add the dataset
+```
 
-Place the dataset in the project folder with the filename:
+## 4️⃣ Add the Dataset
 
+Place the dataset inside the project folder with the filename:
+
+```text
 customer_churn.csv
-5. Train the model
+```
+
+## 5️⃣ Train the Model
+
+```bash
 python train_model.py
+```
 
-This will generate:
+This creates:
 
+```text
 churn_model.pkl
-6. Run the Streamlit application
+```
+
+## 6️⃣ Run the Streamlit Application
+
+```bash
 streamlit run app.py
+```
 
 The application will open in your browser.
 
-🔄 Project Workflow
+---
+
+# 🔄 Project Workflow
+
+```text
 Customer Data
       ↓
 Data Preprocessing
       ↓
 Feature Encoding & Scaling
       ↓
-Train Multiple ML Models
+Train ML Models
       ↓
 Model Evaluation
       ↓
 Select Best Model
       ↓
-Save Model
+Save Trained Model
       ↓
-Streamlit Web Application
+Streamlit Application
       ↓
-Churn Prediction
+Customer Churn Prediction
       ↓
-Risk Level & Retention Recommendations
-🌟 Key Learning Outcomes
+Risk Level
+      ↓
+Retention Recommendations
+```
 
-Through this project, I worked with:
+---
 
-Data preprocessing
-Feature engineering
-Classification algorithms
-Model evaluation
-Machine Learning pipelines
-Hyperparameter/model comparison
-Model serialization using Joblib
-Streamlit application development
-Business-oriented ML predictions
+# 🌟 Key Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* Data preprocessing
+* Exploratory data analysis
+* Classification algorithms
+* Model evaluation
+* Machine Learning pipelines
+* Feature encoding
+* Feature scaling
+* Model comparison
+* Model serialization using Joblib
+* Streamlit application development
+* Business-oriented Machine Learning
+
+---
+
+# 👩‍💻 Author
+
+## **Sabiya Nazeerahmad Mamadapur**
+
+**BE Computer Science & Engineering**
+
+**Interests:** Data Science | Machine Learning | Python | Data Analytics
+
+---
+
+# ⭐ Project
+
+If you find this project useful, feel free to explore the repository and provide feedback.
